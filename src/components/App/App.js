@@ -8,7 +8,12 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>My first React app</h1>
         <h2 className={styles.subtitle}>hello</h2>
-        <List />
+        <List
+          bgImage={'./src/img/space.png'}
+          title={['Things to do', <sup key='1'>soon!</sup>]}
+        >
+          <p>Buddadil!</p>
+        </List>
       </main>
     )
   }
