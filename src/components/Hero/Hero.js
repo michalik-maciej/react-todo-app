@@ -10,6 +10,7 @@ const Hero = props => (
 )
 
 Hero.propTypes = {
+  background: PropTypes.string.isRequired,
   titleText: PropTypes.node.isRequired
 }
 
