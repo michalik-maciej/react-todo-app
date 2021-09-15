@@ -1,29 +1,59 @@
-import React from 'react'
-import styles from './List.scss'
+import Column from '../Column/Column.js'
 import Hero from '../Hero/Hero.js'
 import PropTypes from 'prop-types'
-import Column from '../Column/Column.js'
+import React from 'react'
+import { settings } from '../../data/dataStore'
+import styles from './List.scss'
+import ReactHtmlParser from 'react-html-parser'
+import Creator from '../Creator/Creator.js'
 
 class List extends React.Component {
+  state = {
+    columns: this.props.columns || []
+  }
+
   static propTypes = {
-    bgImage: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
-    title: PropTypes.node.isRequired
+    columns: PropTypes.array,
+    description: PropTypes.node,
+    image: PropTypes.string,
+    title: PropTypes.node
   }
 
   static defaultProps = {
-    children: <p>I can do all the things!!!</p>
+    description: settings.defaultListDescription
+  }
+
+  addColumn (title) {
+    this.setState(state => ({
+      columns: [
+        ...state.columns,
+        {
+          key: state.columns.length
+            ? state.columns[state.columns.length - 1].key + 1
+            : 0,
+          title,
+          icon: 'list-alt',
+          cards: []
+        }
+      ]
+    }))
   }
 
   render () {
     return (
       <section className={styles.component}>
-        <Hero background={this.props.bgImage} titleText={this.props.title} />
-        {this.props.children}
+        <Hero image={this.props.image} titleText={this.props.title} />
+        {ReactHtmlParser(this.props.description)}
         <div className={styles.columns}>
-          <Column title='firstColumn'>Ananas</Column>
-          <Column title='secondColumn'>Banana</Column>
-          <Column title='thirdColumn'>Pine</Column>
+          {this.state.columns.map(({ key, ...columnProps }) => (
+            <Column key={key} {...columnProps} />
+          ))}
+        </div>
+        <div className={styles.creator}>
+          <Creator
+            text={settings.columnCreatorText}
+            action={title => this.addColumn(title)}
+          />
         </div>
       </section>
     )

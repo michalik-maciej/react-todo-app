@@ -4,16 +4,16 @@ export const settings = {
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
-    defaultText: 'Add new item',
+    defaultText: 'Add new item'
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
-  defaultColumnIcon: 'list-alt',
-};
+  defaultColumnIcon: 'list-alt'
+}
 
 export const pageContents = {
   title: 'My first React app',
-  subtitle: 'A simple to-do app, with lists, columns and cards',
-};
+  subtitle: 'A simple to-do app, with lists, columns and cards'
+}
 
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
@@ -27,13 +27,13 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'This Is Going to Hurt',
+          title: 'This Is Going to Hurt'
         },
         {
           key: 1,
-          title: 'Interpreter of Maladies',
-        },
-      ],
+          title: 'Interpreter of Maladies'
+        }
+      ]
     },
     {
       key: 1,
@@ -42,13 +42,13 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'Harry Potter',
+          title: 'Harry Potter'
         },
         {
           key: 1,
-          title: 'Star Wars',
-        },
-      ],
+          title: 'Star Wars'
+        }
+      ]
     },
     {
       key: 2,
@@ -57,13 +57,13 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'The Witcher',
+          title: 'The Witcher'
         },
         {
           key: 1,
-          title: 'Skyrim',
-        },
-      ],
-    },
-  ],
-};
+          title: 'Skyrim'
+        }
+      ]
+    }
+  ]
+}
