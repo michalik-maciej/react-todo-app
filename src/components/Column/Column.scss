@@ -22,7 +22,7 @@
 }
 
 .icon > * {
-  padding-right: $base-size;
+  padding: 0 $base-size;
   color: $color-warning;
   font-size: ($base-size * 2);
   vertical-align: middle;
