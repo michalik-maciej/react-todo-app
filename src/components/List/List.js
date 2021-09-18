@@ -1,11 +1,12 @@
-import Column from '../Column/ColumnContainer';
-import Hero from '../Hero/Hero.js';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
-import styles from './List.scss';
 import ReactHtmlParser from 'react-html-parser';
-//import Creator from '../Creator/CreatorContainer';
+
+import Column from '../Column/ColumnContainer';
+import Creator from '../Creator/Creator';
+import Hero from '../Hero/Hero.js';
+import styles from './List.scss';
 
 class List extends React.Component {
   static propTypes = {
@@ -13,6 +14,7 @@ class List extends React.Component {
     description: PropTypes.node,
     image: PropTypes.string,
     title: PropTypes.node,
+    addColumn: PropTypes.func,
   };
 
   static defaultProps = {
@@ -20,7 +22,7 @@ class List extends React.Component {
   };
 
   render() {
-    const {title, image, description, columns} = this.props; //destrukturyzacja
+    const {title, image, description, columns, addColumn} = this.props; //destrukturyzacja
 
     return (
       <section className={styles.component}>
@@ -33,12 +35,12 @@ class List extends React.Component {
             <Column key={columnData.id} {...columnData} />
           ))}
         </div>
-        {/* <div className={styles.creator}>
+        <div className={styles.creator}>
           <Creator
             text={settings.columnCreatorText}
-            action={(title) => this.addColumn(title)}
+            action={addColumn}
           />
-        </div> */}
+        </div>
       </section>
     );
   }
