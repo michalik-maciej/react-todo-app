@@ -22,24 +22,19 @@ class List extends React.Component {
   };
 
   render() {
-    const {title, image, description, columns, addColumn} = this.props; //destrukturyzacja
+    const { title, image, description, columns, addColumn } = this.props; //destrukturyzacja
 
     return (
       <section className={styles.component}>
         <Hero image={image} titleText={title} />
-        <div className={styles.description}>
-          {ReactHtmlParser(description)}
-        </div>
+        <div className={styles.description}>{ReactHtmlParser(description)}</div>
         <div className={styles.columns}>
-          {columns.map(columnData => (
+          {columns.map((columnData) => (
             <Column key={columnData.id} {...columnData} />
           ))}
         </div>
         <div className={styles.creator}>
-          <Creator
-            text={settings.columnCreatorText}
-            action={addColumn}
-          />
+          <Creator text={settings.columnCreatorText} action={addColumn} />
         </div>
       </section>
     );
