@@ -29,7 +29,8 @@
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.2.5",
     "redux": "^4.1.1",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "http-server": "^13.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -44,7 +45,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.2",
     "html-webpack-plugin": "^3.2.0",
-    "http-server": "^13.0.2",
     "husky": "^4.3.8",
     "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^0.5.0",
