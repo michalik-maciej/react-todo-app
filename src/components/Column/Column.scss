@@ -21,6 +21,10 @@
   margin: 0 0 ($base-size * 1.5) 0;
 }
 
+.cards {
+  padding: ($base-size / 2) 0;
+}
+
 .icon > * {
   padding: 0 $base-size;
   color: $color-warning;

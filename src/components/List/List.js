@@ -7,24 +7,12 @@ import Column from '../Column/ColumnContainer';
 import Creator from '../Creator/Creator';
 import Hero from '../Hero/Hero.js';
 import styles from './List.scss';
+import Container from '../Container/Container';
 
-class List extends React.Component {
-  static propTypes = {
-    columns: PropTypes.array,
-    description: PropTypes.node,
-    image: PropTypes.string,
-    title: PropTypes.node,
-    addColumn: PropTypes.func,
-  };
-
-  static defaultProps = {
-    description: settings.defaultListDescription,
-  };
-
-  render() {
-    const { title, image, description, columns, addColumn } = this.props; //destrukturyzacja
-
-    return (
+const List = props => {
+  const { title, image, description, columns, addColumn } = props;
+  return (
+    <Container>
       <section className={styles.component}>
         <Hero image={image} titleText={title} />
         <div className={styles.description}>{ReactHtmlParser(description)}</div>
@@ -37,8 +25,20 @@ class List extends React.Component {
           <Creator text={settings.columnCreatorText} action={addColumn} />
         </div>
       </section>
-    );
-  }
-}
+    </Container>
+  );
+};
+
+List.propTypes = {
+  columns: PropTypes.array,
+  description: PropTypes.node,
+  image: PropTypes.string,
+  title: PropTypes.node,
+  addColumn: PropTypes.func,
+};
+
+List.defaultProps = {
+  description: settings.defaultListDescription,
+};
 
 export default List;
