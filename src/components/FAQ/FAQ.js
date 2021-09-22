@@ -2,23 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
-import { infoData } from '../../data/dataStore';
+import {faqData} from '../../data/dataStore';
 
-const Info = () => {
-  const {image, content, title} = infoData;
-  console.log(infoData);
+const FAQ = () => {
+  const {content, title, image} = faqData;
   return (
     <Container>
       <Hero image={image} titleText={title} />
-      <p>{content}</p>
+      {content}
     </Container>
   );
 };
 
-Info.propTypes = {
+FAQ.propTypes = {
   content: PropTypes.node,
   image: PropTypes.string,
   title: PropTypes.node,
 };
 
-export default Info;
+export default FAQ;
