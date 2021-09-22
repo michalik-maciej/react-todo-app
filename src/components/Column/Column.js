@@ -8,7 +8,7 @@ import Creator from '../Creator/Creator';
 import Icon from '../Icon/Icon';
 import styles from './Column.scss';
 
-const Column = props => {
+const Column = (props) => {
   const { icon, id, title, cards, addCard } = props;
   return (
     <section className={styles.component}>
@@ -19,9 +19,13 @@ const Column = props => {
         </span>
       </h3>
       <Droppable droppableId={id}>
-        {provided => (
-          <div className={styles.cards} {...provided.droppableProps} ref={provided.innerRef}>
-            {cards.map(cardData => (
+        {(provided) => (
+          <div
+            className={styles.cards}
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {cards.map((cardData) => (
               <Card key={cardData.id} {...cardData} />
             ))}
             {provided.placeholder}

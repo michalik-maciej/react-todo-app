@@ -3,8 +3,8 @@ import styles from './Card.scss';
 import PropTypes from 'prop-types';
 import { Draggable } from 'react-beautiful-dnd';
 
-const Card = props => {
-  const {id, index, title} = props;
+const Card = (props) => {
+  const { id, index, title } = props;
   return (
     <Draggable draggableId={id} index={index}>
       {(provided) => (

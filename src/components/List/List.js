@@ -9,7 +9,7 @@ import Hero from '../Hero/Hero.js';
 import styles from './List.scss';
 import Container from '../Container/Container';
 
-const List = props => {
+const List = (props) => {
   const { title, image, description, columns, addColumn } = props;
   return (
     <Container>
