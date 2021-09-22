@@ -1,12 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import { infoData } from '../../data/dataStore';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
-import { infoData } from '../../data/dataStore';
 
 const Info = () => {
   const {image, content, title} = infoData;
-  console.log(infoData);
   return (
     <Container>
       <Hero image={image} titleText={title} />

@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { settings } from '../../data/dataStore';
+import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
 
+import { settings } from '../../data/dataStore';
 import Card from '../Card/Card';
 import Creator from '../Creator/Creator';
 import Icon from '../Icon/Icon';

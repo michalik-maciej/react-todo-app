@@ -1,10 +1,11 @@
-import React from 'react';
-import styles from './Search.scss';
-import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import { settings } from '../../data/dataStore';
-import Icon from '../Icon/Icon';
+import Button from '../Button/Button';
 import Container from '../Container/Container';
+import Icon from '../Icon/Icon';
+import styles from './Search.scss';
 
 class Search extends React.Component {
   static propTypes = {

@@ -1,8 +1,9 @@
 import { combineReducers, createStore } from 'redux';
-import columnsReducer from './columnsRedux';
-import cardsReducer from './cardsRedux';
-import searchStringReducer from './searchStringRedux';
+
 import initialStoreData from '../data/dataStore';
+import cardsReducer from './cardsRedux';
+import columnsReducer from './columnsRedux';
+import searchStringReducer from './searchStringRedux';
 
 // define initial state and shallow-merge initial data
 const initialState = {

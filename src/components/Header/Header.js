@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './Header.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+import { settings } from '../../data/dataStore';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
-import { settings } from '../../data/dataStore';
+import styles from './Header.scss';
 
 class Header extends React.Component {
   render() {

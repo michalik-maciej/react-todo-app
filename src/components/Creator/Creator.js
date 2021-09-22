@@ -1,7 +1,8 @@
-import React from 'react';
-import styles from './Creator.scss';
-import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Button from '../Button/Button';
+import styles from './Creator.scss';
 
 class Creator extends React.Component {
   static propTypes = {
