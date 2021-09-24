@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { settings } from '../../data/dataStore';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
+import Search from '../Search/Search';
 import styles from './Header.scss';
 
 class Header extends React.Component {
@@ -15,6 +16,7 @@ class Header extends React.Component {
             <Link className={styles.logo} to="/">
               <Icon name={settings.headerIcon}></Icon>
             </Link>
+            <Search />
             <nav>
               <NavLink exact to="/" activeClassName="active">
                 Home

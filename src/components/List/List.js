@@ -11,7 +11,8 @@ import styles from './List.scss';
 
 const List = (props) => {
   const { title, image, description, columns, addColumn } = props;
-  return (
+  
+  return (  
     <Container>
       <section className={styles.component}>
         <Hero image={image} titleText={title} />
@@ -24,7 +25,7 @@ const List = (props) => {
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={addColumn} />
         </div>
-      </section>
+      </section>      
     </Container>
   );
 };
@@ -35,6 +36,7 @@ List.propTypes = {
   image: PropTypes.string,
   title: PropTypes.node,
   addColumn: PropTypes.func,
+  moveCard: PropTypes.func,
 };
 
 List.defaultProps = {
